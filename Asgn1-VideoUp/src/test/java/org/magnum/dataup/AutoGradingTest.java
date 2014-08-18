@@ -145,6 +145,7 @@ public class AutoGradingTest {
 	@Test
 	public void testAddVideoData() throws Exception {
 		Video received = videoSvc.addVideo(video);
+		
 		VideoStatus status = videoSvc.setVideoData(received.getId(),
 				new TypedFile(received.getContentType(), testVideoData));
 		assertEquals(VideoState.READY, status.getState());
