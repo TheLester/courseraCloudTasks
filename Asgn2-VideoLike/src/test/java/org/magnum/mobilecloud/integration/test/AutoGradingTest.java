@@ -251,10 +251,10 @@ public class AutoGradingTest {
 
 		// Get the video again
 		v = readWriteVideoSvcUser1.getVideoById(v.getId());
-
+		
 		// Make sure the like count is 1
 		assertTrue(v.getLikes() == 1);
-
+		
 		try {
 			// Like the video again.
 			readWriteVideoSvcUser1.likeVideo(v.getId());
